@@ -17,9 +17,13 @@
 		AF7B1B75244BA78400973A3F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B1B73244BA6E100973A3F /* APIManager.swift */; };
 		AF7B1B77244BA90E00973A3F /* LocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B1B76244BA90E00973A3F /* LocationData.swift */; };
 		AF7B1B7B244C4C2D00973A3F /* LocationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B1B7A244C4C2D00973A3F /* LocationsModel.swift */; };
+		C774BADAB21FC0A9E5280416 /* Pods_Clight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 148CE238B3B614F81F91042E /* Pods_Clight.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		148CE238B3B614F81F91042E /* Pods_Clight.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Clight.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A008231DFC0B71986F9EB95 /* Pods-Clight.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clight.debug.xcconfig"; path = "Target Support Files/Pods-Clight/Pods-Clight.debug.xcconfig"; sourceTree = "<group>"; };
+		A80528C64A6CF7B52CEC284D /* Pods-Clight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Clight.release.xcconfig"; path = "Target Support Files/Pods-Clight/Pods-Clight.release.xcconfig"; sourceTree = "<group>"; };
 		AF7B1B49244B968200973A3F /* Clight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Clight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7B1B4C244B968200973A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7B1B4E244B968200973A3F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C774BADAB21FC0A9E5280416 /* Pods_Clight.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C1D78618CD2BFEE79DE90A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				148CE238B3B614F81F91042E /* Pods_Clight.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		911F61B93C455EDEFA6C77D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3A008231DFC0B71986F9EB95 /* Pods-Clight.debug.xcconfig */,
+				A80528C64A6CF7B52CEC284D /* Pods-Clight.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AF7B1B40244B968200973A3F = {
 			isa = PBXGroup;
 			children = (
 				AF7B1B4B244B968200973A3F /* Clight */,
 				AF7B1B4A244B968200973A3F /* Products */,
+				911F61B93C455EDEFA6C77D4 /* Pods */,
+				8C1D78618CD2BFEE79DE90A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,9 +143,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF7B1B5D244B968500973A3F /* Build configuration list for PBXNativeTarget "Clight" */;
 			buildPhases = (
+				638694784A4DFFA375F15B81 /* [CP] Check Pods Manifest.lock */,
 				AF7B1B45244B968200973A3F /* Sources */,
 				AF7B1B46244B968200973A3F /* Frameworks */,
 				AF7B1B47244B968200973A3F /* Resources */,
+				972B30C05EBEC9F210034247 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +203,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		638694784A4DFFA375F15B81 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Clight-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		972B30C05EBEC9F210034247 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clight/Pods-Clight-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Clight/Pods-Clight-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Clight/Pods-Clight-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF7B1B45244B968200973A3F /* Sources */ = {
@@ -330,6 +399,7 @@
 		};
 		AF7B1B5E244B968500973A3F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A008231DFC0B71986F9EB95 /* Pods-Clight.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -348,6 +418,7 @@
 		};
 		AF7B1B5F244B968500973A3F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A80528C64A6CF7B52CEC284D /* Pods-Clight.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
