@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -64,7 +64,6 @@
 				3A008231DFC0B71986F9EB95 /* Pods-Clight.debug.xcconfig */,
 				A80528C64A6CF7B52CEC284D /* Pods-Clight.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -89,7 +88,7 @@
 		AF7B1B4B244B968200973A3F /* Clight */ = {
 			isa = PBXGroup;
 			children = (
-				AF7B1B69244B979A00973A3F /* Core */,
+				AF7B1B69244B979A00973A3F /* Shared */,
 				AF7B1B66244B976C00973A3F /* Model */,
 				AF7B1B60244B96E600973A3F /* View */,
 				AF7B1B6C244B97D200973A3F /* Controller */,
@@ -119,13 +118,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		AF7B1B69244B979A00973A3F /* Core */ = {
+		AF7B1B69244B979A00973A3F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				AF7B1B73244BA6E100973A3F /* APIManager.swift */,
 				AF7B1B6D244B986900973A3F /* APIConst.swift */,
 			);
-			path = Core;
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		AF7B1B6C244B97D200973A3F /* Controller */ = {
